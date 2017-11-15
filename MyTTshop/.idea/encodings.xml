@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ttcommon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ttitemweb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ttmanagerdao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ttmanagerservice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ttmanagerweb" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

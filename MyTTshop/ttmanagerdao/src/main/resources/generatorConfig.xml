@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="D:\theforth\repository\mysql\mysql-connector-java\5.1.34\mysql-connector-java-5.1.34.jar" ></classPathEntry>
+  <context id="context1" >
+	<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+	</commentGenerator>
+	  <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/ttshop?characterEncoding=utf-8" userId="root" password="123456" />
+	  <!-- 生成POJO类的位置 -->
+    <javaModelGenerator targetPackage="com.qf.pojo" targetProject="src/main/java" />
+	  <!-- mapper映射文件生成的位置 打包注意 -->
+    <sqlMapGenerator targetPackage="com.qf.mapper" targetProject="src/main/java" />
+	  <!-- mapper接口生成的位置 -->
+    <javaClientGenerator targetPackage="com.qf.dao" targetProject="src/main/java" type="XMLMAPPER" />
+	  <!-- 指定数据库表 -->
+    <table  tableName="tb_content" domainObjectName="TbContent"></table>
+    <table  tableName="tb_content_category" domainObjectName="TbContentCategory"></table>
+    <table  tableName="tb_item" domainObjectName="TbItem"></table>
+	<table  tableName="tb_item_cat" domainObjectName="TbItemCat"></table>
+	<table  tableName="tb_item_desc" domainObjectName="TbItemDesc"></table>
+	<table  tableName="tb_item_param" domainObjectName="TbItemParam"></table>
+	<table  tableName="tb_item_param_item" domainObjectName="TbItemParamItem"></table>
+	<table  tableName="tb_order" domainObjectName="TbOrder"></table>
+	<table  tableName="tb_order_item" domainObjectName="TbOrderItem"></table>
+	<table  tableName="tb_order_shipping" domainObjectName="TbOrderShipping"></table>
+	<table  tableName="tb_user" domainObjectName="TbUser"></table>
+  </context>
+</generatorConfiguration>

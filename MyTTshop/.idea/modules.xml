@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyTTshop.iml" filepath="$PROJECT_DIR$/MyTTshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ttcommon/ttcommon.iml" filepath="$PROJECT_DIR$/ttcommon/ttcommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ttitemweb/ttitemweb.iml" filepath="$PROJECT_DIR$/ttitemweb/ttitemweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ttmanagerdao/ttmanagerdao.iml" filepath="$PROJECT_DIR$/ttmanagerdao/ttmanagerdao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ttmanagerservice/ttmanagerservice.iml" filepath="$PROJECT_DIR$/ttmanagerservice/ttmanagerservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ttmanagerweb/ttmanagerweb.iml" filepath="$PROJECT_DIR$/ttmanagerweb/ttmanagerweb.iml" />
+    </modules>
+  </component>
+</project>

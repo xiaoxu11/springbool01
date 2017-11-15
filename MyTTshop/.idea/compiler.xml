@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ttcommon" />
+        <module name="ttitemweb" />
+        <module name="ttmanagerdao" />
+        <module name="ttmanagerservice" />
+        <module name="ttmanagerweb" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="MyTTshop" target="1.8" />
+      <module name="ttcommon" target="1.8" />
+      <module name="ttitemweb" target="1.8" />
+      <module name="ttmanagerdao" target="1.8" />
+      <module name="ttmanagerservice" target="1.8" />
+      <module name="ttmanagerweb" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

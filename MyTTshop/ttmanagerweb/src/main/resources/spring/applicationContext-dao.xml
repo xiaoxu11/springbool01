@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context   
+        http://www.springframework.org/schema/context/spring-context.xsd   
+        http://www.springframework.org/schema/mvc   
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--持久层配置-->
+    <!-- 加载属性配置文件 -->
+    <context:property-placeholder location="classpath:properties/*.properties"></context:property-placeholder>
+
+    <!--运用德鲁伊，配置数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close"><!--destroy-method="close"指定生命周期销毁方式为close-->
+        <property name="url" value="${jdbc.url}"/>
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxActive" value="10"/><!--最大生成的连接数-->
+        <property name="minIdle" value="3"/><!--刚开始最小的个数-->
+    </bean>
+
+    <!--穿件SessionFactory工厂，注入数据源-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--注入数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--注册实体，扫描mapper文件-->
+        <property name="mapperLocations" value="classpath:com/qf/mapper/*Mapper.xml"/><!--获取mapper的相对路径-->
+        <!--加载全局配置文件(分页..等)-->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/><!--配置连接mybatis-->
+    </bean>
+
+    <!--mapper需要扫描DAO接口，定位到具体的dao包-->
+    <!--扫描dao接口，生成dao的实现类（代理类）-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--必须指定到dao接口的完整包，即包下的类必须是dao接口-->
+        <property name="basePackage" value="com.qf.dao"/>
+    </bean>
+</beans>
